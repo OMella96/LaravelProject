@@ -18,7 +18,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('ejes.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Crear Nuevo') }}
+                                  {{ __('Crear +') }}
                                 </a>
                               </div>
                         </div>
@@ -53,9 +53,9 @@
 											<td>{{ $eje->descripcion }}</td>
 
                                             <td>
-                                                <form action="{{ route('ejes.destroy',$eje->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('ejes.show',$eje->id) }}"><i class="fa fa-fw fa-eye"></i> Mostrar</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('ejes.edit',$eje->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                                                <form action="{{ route('ejes.destroy',$eje->id) }}" class="d-inline" method="POST" onclick="return confirm('Desea borrar?')">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Borrar</button>

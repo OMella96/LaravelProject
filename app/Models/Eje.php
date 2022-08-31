@@ -20,11 +20,11 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Eje extends Model
 {
-    
+
     static $rules = [
 		'manual_id' => 'required',
-		'nombre' => 'required',
-		'descripcion' => 'required',
+		'nombre' => 'required|string|max:100',
+		'descripcion' => 'required|string|max:100',
     ];
 
     protected $perPage = 20;
@@ -44,6 +44,6 @@ class Eje extends Model
     {
         return $this->hasOne('App\Models\Manuale', 'id', 'manual_id');
     }
-    
+
 
 }

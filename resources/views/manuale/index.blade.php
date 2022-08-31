@@ -18,7 +18,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('manuales.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Crear Nuevo') }}
+                                  {{ __('Crear +') }}
                                 </a>
                               </div>
                         </div>
@@ -51,9 +51,9 @@
 											<td>{{ $manuale->copyright }}</td>
 
                                             <td>
-                                                <form action="{{ route('manuales.destroy',$manuale->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('manuales.show',$manuale->id) }}"><i class="fa fa-fw fa-eye"></i> Mostrar</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('manuales.edit',$manuale->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                                                <form action="{{ route('manuales.destroy',$manuale->id) }}" class="d-inline" method="POST" onclick="return confirm('Desea borrar?')">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Borrar</button>

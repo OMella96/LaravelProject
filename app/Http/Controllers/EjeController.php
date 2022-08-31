@@ -72,6 +72,7 @@ class EjeController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
+    //funcion
     public function edit($id)
     {
         $eje = Eje::find($id);
@@ -86,6 +87,7 @@ class EjeController extends Controller
      * @param  Eje $eje
      * @return \Illuminate\Http\Response
      */
+    //funcion para actualizar los elementos de la tabla eje y redireccionar al eje.index
     public function update(Request $request, Eje $eje)
     {
         request()->validate(Eje::$rules);
@@ -101,6 +103,7 @@ class EjeController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Exception
      */
+    //funcion para eliminar un elemento de la tabla eje, a traves de la id y redireccionar al eje.index
     public function destroy($id)
     {
         $eje = Eje::find($id)->delete();

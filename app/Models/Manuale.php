@@ -19,10 +19,10 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Manuale extends Model
 {
-    
+
     static $rules = [
-		'nombre' => 'required',
-		'copyright' => 'required',
+		'nombre' => 'required|string|max:100',
+		'copyright' => 'required|string|max:100',
     ];
 
     protected $perPage = 20;
@@ -42,6 +42,6 @@ class Manuale extends Model
     {
         return $this->hasMany('App\Models\Eje', 'manual_id', 'id');
     }
-    
+
 
 }
