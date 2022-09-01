@@ -34,7 +34,7 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                        <th>Id</th>
 
 										<th>Manual</th>
 										<th>Nombre</th>
@@ -46,7 +46,7 @@
                                 <tbody>
                                     @foreach ($ejes as $eje)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            <td>{{ $eje->id }}</td>
 
 											<td>{{ $eje->manuale->nombre }}</td>
 											<td>{{ $eje->nombre }}</td>

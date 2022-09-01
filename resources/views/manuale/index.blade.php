@@ -34,7 +34,7 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                        <th>Id</th>
 
 										<th>Nombre</th>
 										<th>Copyright</th>
@@ -45,7 +45,7 @@
                                 <tbody>
                                     @foreach ($manuales as $manuale)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            <td>{{ $manuale->id }}</td>
 
 											<td>{{ $manuale->nombre }}</td>
 											<td>{{ $manuale->copyright }}</td>
