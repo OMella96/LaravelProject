@@ -19,10 +19,10 @@ class EjeController extends Controller
      */
     public function index()
     {
-        $ejes = Eje::paginate();
+        $ejes = Eje::paginate(5);
 
         return view('eje.index', compact('ejes'))
-            ->with('i', (request()->input('page', 1) - 1) * $ejes->perPage());
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
